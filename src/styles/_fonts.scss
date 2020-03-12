@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap");
+@import "./colors";
+*, input, select, option{
+    font-family: "Open Sans", sans-serif;
+}
+
+ul, li,
+h1, h2,
+h3, h4,
+h5, h6,
+figure,
+p,
+span,
+a {
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    text-transform: lowercase;
+    font-weight: 700;
+    font-size: 3.6rem;
+    color: $white;
+    span{
+        font-weight: 300;
+    }
+}
+
+input, select, option{
+    font-size: 1.4rem;
+    color: $lightPurple;
+    border-style: none;
+}
+
+button{
+    background-color: $darkPurple;
+    border-radius: 25px;
+    border-style: none;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 800;
+    width: 246px;
+    height:50px;
+}

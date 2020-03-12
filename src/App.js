@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import './App.css';
+import './styles/App.scss';
 import axios from 'axios';
 
 class App extends Component {
@@ -24,10 +24,12 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-            <form action="">
+          <div className="App">
+            <div className="search">
+          <h1>Image <span>search</span></h1>
+            <form action="" class="wrapper">
               <input type="text" name="query" placeholder="Query" />
-              <select name="collections" id="collections">
+                <select name="collections" id="collections">
                 <option value="wallpapers">Wallpapers</option>
                 <option value="nature">Nature</option>
                 <option value="film">Film</option>
@@ -35,9 +37,11 @@ class App extends Component {
                 <option value="foodndrink">Food & Drink</option>
                 <option value="people">People</option>
                 <option value="animals">Animals</option>
-
               </select>
+              <button type="submit">Search</button>
                   </form>
+            </div>
+            
             </div>
         );
     }
