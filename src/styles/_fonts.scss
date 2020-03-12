@@ -30,6 +30,15 @@ input, select, option{
     font-size: 1.4rem;
     color: $lightPurple;
     border-style: none;
+    background-color: $white;
+    font-weight: 600;
+    &::placeholder{
+        opacity: 1;
+    }
+}
+
+option{
+    color: $black;
 }
 
 button{
@@ -41,4 +50,6 @@ button{
     font-weight: 800;
     width: 246px;
     height:50px;
+    font-size: 1.4rem;
+    text-align: center;
 }

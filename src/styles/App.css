@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap");
-@import url("https://kit.fontawesome.com/a6deab4c82.js");
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }
@@ -212,6 +211,28 @@ input, select, option {
   font-size: 1.4rem;
   color: #D5D7E5;
   border-style: none;
+  background-color: #FFFFFF;
+  font-weight: 600;
+}
+
+input::-webkit-input-placeholder, select::-webkit-input-placeholder, option::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+input:-ms-input-placeholder, select:-ms-input-placeholder, option:-ms-input-placeholder {
+  opacity: 1;
+}
+
+input::-ms-input-placeholder, select::-ms-input-placeholder, option::-ms-input-placeholder {
+  opacity: 1;
+}
+
+input::placeholder, select::placeholder, option::placeholder {
+  opacity: 1;
+}
+
+option {
+  color: #050417;
 }
 
 button {
@@ -223,11 +244,23 @@ button {
   font-weight: 800;
   width: 246px;
   height: 50px;
+  font-size: 1.4rem;
+  text-align: center;
 }
 
 .search {
   background-color: #050417;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .search form {
@@ -244,11 +277,16 @@ button {
   width: 30%;
   overflow: hidden;
   height: 30vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .search form input, .search form select {
   height: 50px;
   border-radius: 4px;
+  width: 400px;
+  padding: 0 20px;
 }
 
 .search form select {
@@ -256,11 +294,16 @@ button {
   background-size: 12px;
   background-position: calc(100% - 20px) center;
   background-repeat: no-repeat;
-  background-color: #efefef;
+  background-color: #FFFFFF;
   -webkit-appearance: none;
   -moz-appearance: none;
   -webkit-box-shadow: 0px 15px 0px -7px rgba(213, 215, 229, 0.7);
   box-shadow: 0px 15px 0px -7px rgba(213, 215, 229, 0.7);
+  border-radius: 4px;
+}
+
+.search form input {
+  background-color: #FFFFFF;
 }
 
 html {
