@@ -1,6 +1,11 @@
 import React, { Component} from 'react';
 import './styles/App.scss';
+import {
+  BrowserRouter as Router,
+  Route, Link
+} from 'react-router-dom';
 import axios from 'axios';
+import Gallery from './Gallery';
 
 class App extends Component {
   constructor() {
