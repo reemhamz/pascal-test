@@ -8,7 +8,9 @@ class App extends Component {
     this.state = {
       searchQuery: "",
       collection: "",
-      collectData: ""
+      collectData: "",
+      imageURL: "",
+      apiResponse:""
       
     }
   }
@@ -24,7 +26,12 @@ class App extends Component {
         dataResponse: "json"
       }).then((response) => {
         const responseObjects = response.data.results;
-        console.log(responseObjects)
+        const responseValues = Object.values(responseObjects);
+        
+
+        this.setState({
+          apiResponse:responseValues
+        })
       })
     }
         this.setState({
@@ -73,7 +80,13 @@ class App extends Component {
                 <option value="animals">Animals</option>
               </select>
                 <button type="submit" onClick={querySubmit}>Search</button>
-                  </form>
+              </form>
+              
+              {
+                this.state.apiResponse.map((cats) => {
+                  return cats
+                })
+              }
             </div>
             
             </div>
