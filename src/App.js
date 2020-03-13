@@ -10,7 +10,7 @@ class App extends Component {
       collection: "",
       collectData: "",
       imageURL: "",
-      apiResponse:""
+      apiResponse:[]
       
     }
   }
@@ -28,10 +28,18 @@ class App extends Component {
         const responseObjects = response.data.results;
         const responseValues = Object.values(responseObjects);
         
+        // responseValues.map(photos => {
+          
+        //   this.setState({
+        //     apiResponse: photos.urls.regular
+        //   })
 
+        //   return this.state.apiResponse
+        // })
         this.setState({
-          apiResponse:responseValues
+          apiResponse: responseValues
         })
+        console.log(this.state.apiResponse)
       })
     }
         this.setState({
@@ -60,9 +68,12 @@ class App extends Component {
       const querySubmit = (e) => {
         e.preventDefault();
         console.log(this.state.searchQuery)
+        
         return this.state.collectData();
+        
       }
     
+        const photos = this.state.apiResponse
     
         return (
           <div className="App">
@@ -82,11 +93,14 @@ class App extends Component {
                 <button type="submit" onClick={querySubmit}>Search</button>
               </form>
               
-              {
-                this.state.apiResponse.map((cats) => {
-                  return cats
-                })
-              }
+              <div className="display">
+                {
+                  photos.map(photo =>{
+                    return <img key={photo.id} src={photo.urls.regular} alt={photo.alt_description}/>
+                  })
+                }
+                
+              </div>
             </div>
             
             </div>
