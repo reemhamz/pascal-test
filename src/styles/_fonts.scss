@@ -37,6 +37,13 @@ input, select, option{
     }
 }
 
+input, select {
+    transition: 0.3s;
+    &:focus{
+        color: $darkPurple;
+    }
+}
+
 option{
     color: $black;
 }
@@ -52,4 +59,9 @@ button{
     height:50px;
     font-size: 1.4rem;
     text-align: center;
+    transition: 0.2s;
+    &:hover{
+        background-color: $lightPurple;
+        color: $darkPurple;
+    }
 }

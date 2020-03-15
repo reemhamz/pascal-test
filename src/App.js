@@ -1,9 +1,9 @@
 import React, { Component} from 'react';
 import './styles/App.scss';
-import {
-  BrowserRouter as Router,
-  Route, Link
-} from 'react-router-dom';
+// import {
+//   BrowserRouter as Router,
+//   Route, Link
+// } from 'react-router-dom';
 import axios from 'axios';
 import Gallery from './Gallery';
 
@@ -32,15 +32,7 @@ class App extends Component {
       }).then((response) => {
         const responseObjects = response.data.results;
         const responseValues = Object.values(responseObjects);
-        
-        // responseValues.map(photos => {
-          
-        //   this.setState({
-        //     apiResponse: photos.urls.regular
-        //   })
 
-        //   return this.state.apiResponse
-        // })
         this.setState({
           apiResponse: responseValues
         })
@@ -83,6 +75,7 @@ class App extends Component {
         return (
           <div className="App">
             <div className="search">
+                <img src={require("./assets/logo.png")} alt="Site logo of a purple chameleon" className="logo"/>
           <h1>Image <span>search</span></h1>
             <form action="" className="wrapper">
                 <input type="text" name="query" placeholder="Query" onChange={queryChange}/>
@@ -98,14 +91,16 @@ class App extends Component {
                 <button type="submit" onClick={querySubmit}>Search</button>
               </form>
               
-              <div className="display">
+              <main className="gallery">
                 {
                   photos.map(photo =>{
-                    return <img key={photo.id} src={photo.urls.regular} alt={photo.alt_description}/>
+                    return (
+                      <Gallery key={photo.id} photoProp={photo}/>
+                    )
                   })
                 }
                 
-              </div>
+              </main>
             </div>
             
             </div>

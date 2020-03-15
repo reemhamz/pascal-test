@@ -231,6 +231,15 @@ input::placeholder, select::placeholder, option::placeholder {
   opacity: 1;
 }
 
+input, select {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input:focus, select:focus {
+  color: #2A2B8D;
+}
+
 option {
   color: #050417;
 }
@@ -246,6 +255,13 @@ button {
   height: 50px;
   font-size: 1.4rem;
   text-align: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #D5D7E5;
+  color: #2A2B8D;
 }
 
 .search {
@@ -261,6 +277,12 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.search .logo {
+  height: 70px;
+  width: 70px;
+  margin: 20px auto;
 }
 
 .search form {
@@ -304,6 +326,23 @@ button {
 
 .search form input {
   background-color: #FFFFFF;
+}
+
+.gallery {
+  background-color: #2A2B8D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.galleryPhotos {
+  display: inline-block;
 }
 
 html {
