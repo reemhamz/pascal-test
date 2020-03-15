@@ -36,7 +36,7 @@ class App extends Component {
         this.setState({
           apiResponse: responseValues
         })
-        console.log(this.state.apiResponse)
+        
       })
     }
         this.setState({
@@ -91,17 +91,12 @@ class App extends Component {
                 <button type="submit" onClick={querySubmit}>Search</button>
               </form>
               
+            </div>
               <main className="gallery">
-                {
-                  photos.map(photo =>{
-                    return (
-                      <Gallery key={photo.id} photoProp={photo}/>
-                    )
-                  })
-                }
+                
+                <Gallery photosProp={photos}/>
                 
               </main>
-            </div>
             
             </div>
         );

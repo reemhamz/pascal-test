@@ -3,10 +3,11 @@
 
 .search{
     background-color: $black;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     .logo{
         height: 70px;
         width: 70px;

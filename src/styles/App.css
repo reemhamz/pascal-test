@@ -264,9 +264,13 @@ button:hover {
   color: #2A2B8D;
 }
 
+ul li {
+  list-style-type: none;
+}
+
 .search {
   background-color: #050417;
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,6 +281,7 @@ button:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 .search .logo {
@@ -329,28 +334,34 @@ button:hover {
 }
 
 .gallery {
-  background-color: #2A2B8D;
+  background-color: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  margin: 80px 0;
 }
 
-.galleryPhotos {
-  display: inline-block;
+.galleryDisplay ul {
+  -webkit-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 60px;
+          column-gap: 60px;
+}
+
+.galleryDisplay ul li {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.galleryDisplay ul li img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 300px;
+  display: block;
 }
 
 html {
   font-size: 62.5%;
-}
-
-body {
-  text-align: center;
 }
 
 .wrapper {

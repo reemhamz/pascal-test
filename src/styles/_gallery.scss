@@ -1,16 +1,27 @@
 .gallery{
-    background-color: $darkPurple;
+    background-color: $white;
     display: flex;
-    flex-flow: row wrap;
-    flex-wrap: wrap;
-    
+    // overflow: hidden;
+    // flex-flow: row wrap;
+    // flex-wrap: wrap;
+    // min-height: 100vh;
+    margin: 80px 0;
 }
 
-.galleryPhotos{
-    // width: 100%;
-    display: inline-block;
-    img{
+.galleryDisplay{
+    ul{
+        column-count: 3;
+        column-gap: 60px;
         
-        // max-height: 100px;
+        li{
+            max-width: 300px;
+            margin-bottom: 20px;
+            img{
+                object-fit: contain;
+                max-width: 300px;
+                display: block;
+            }
+        }
     }
+    
 }
