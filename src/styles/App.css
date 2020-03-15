@@ -268,6 +268,11 @@ ul li {
   list-style-type: none;
 }
 
+p {
+  color: #2A2B8D;
+  font-size: 2.5rem;
+}
+
 .search {
   background-color: #050417;
   min-height: 100vh;
@@ -358,6 +363,32 @@ ul li {
      object-fit: contain;
   max-width: 300px;
   display: block;
+}
+
+.preloader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.preloader h1 {
+  color: #2A2B8D;
+}
+
+.preloader img {
+  width: 300px;
+  height: 300px;
 }
 
 html {

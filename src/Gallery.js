@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './styles/App.scss';
-import Masonry from 'react-masonry-css';
 
 class Gallery extends Component {
     render() {
@@ -12,7 +11,7 @@ class Gallery extends Component {
                 <ul className="wrapper">
                     {
                         getPhotos.map(photo => {
-                            console.log(photo)
+                            // console.log(photo)
                             return (
                                 <li className="galleryPhoto">
                                     <img src={photo.urls.regular} alt={photo.alt_description} key={photo.id}/>
