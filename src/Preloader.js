@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles/App.scss';
-
+import jump from 'jump.js';
 
 class Preloader extends Component {
     render() {

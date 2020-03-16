@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import './styles/App.scss';
+import Search from './Search';
 
 class Gallery extends Component {
     render() {
         const getPhotos = this.props.photosProp;
         // console.log(getPhotos)
         return (
+            <>
+                <nav className="searchNavigation">
+                    <Search />
+            </nav>
+
             <section className="galleryDisplay wrapper">
                 
-                <ul className="wrapper">
+                <ul className ="galleryList">
                     {
                         getPhotos.map(photo => {
                             // console.log(photo)
@@ -22,7 +28,8 @@ class Gallery extends Component {
                 </ul>
                     
                     
-            </section>
+                </section>
+                </>
         );
     }
 }
